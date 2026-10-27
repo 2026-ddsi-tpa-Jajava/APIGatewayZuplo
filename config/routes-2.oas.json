@@ -1,0 +1,2233 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "DonaTrack API Gateway"
+  },
+  "paths": {
+    "/donadores-entidades/donadores": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /donadores",
+        "operationId": "donadoresyentidadesPostDonadores",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/donadores${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "get": {
+        "summary": "GET /donadores",
+        "operationId": "donadoresyentidadesGetDonadores",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/donadores${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "delete": {
+        "summary": "DELETE /donadores",
+        "operationId": "donadoresyentidadesDeleteDonadores",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/donadores${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/donadores-entidades/donadores/{id}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /donadores/{id}",
+        "operationId": "donadoresyentidadesGetDonadoresId",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/donadores/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donadores-entidades/donadores/{id}/estado": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "patch": {
+        "summary": "PATCH /donadores/{id}/estado",
+        "operationId": "donadoresyentidadesPatchDonadoresIdEstado",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/donadores/${params.id}/estado${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donadores-entidades/donadores/{id}/categoria": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "patch": {
+        "summary": "PATCH /donadores/{id}/categoria",
+        "operationId": "donadoresyentidadesPatchDonadoresIdCategoria",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/donadores/${params.id}/categoria${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donadores-entidades/donadores/{id}/puede-donar": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /donadores/{id}/puede-donar",
+        "operationId": "donadoresyentidadesGetDonadoresIdPuedeDonar",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/donadores/${params.id}/puede-donar${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donadores-entidades/donadores/{id}/estadisticas": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /donadores/{id}/estadisticas",
+        "operationId": "donadoresyentidadesGetDonadoresIdEstadisticas",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/donadores/${params.id}/estadisticas${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donadores-entidades/donadores/{id}/quejas": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /donadores/{id}/quejas",
+        "operationId": "donadoresyentidadesPostDonadoresIdQuejas",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/donadores/${params.id}/quejas${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "get": {
+        "summary": "GET /donadores/{id}/quejas",
+        "operationId": "donadoresyentidadesGetDonadoresIdQuejas",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/donadores/${params.id}/quejas${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donadores-entidades/donadores/quejas": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "delete": {
+        "summary": "DELETE /donadores/quejas",
+        "operationId": "donadoresyentidadesDeleteDonadoresQuejas",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/donadores/quejas${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/donadores-entidades/entidades": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /entidades",
+        "operationId": "donadoresyentidadesPostEntidades",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/entidades${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "get": {
+        "summary": "GET /entidades",
+        "operationId": "donadoresyentidadesGetEntidades",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/entidades${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "delete": {
+        "summary": "DELETE /entidades",
+        "operationId": "donadoresyentidadesDeleteEntidades",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/entidades${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/donadores-entidades/entidades/{id}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /entidades/{id}",
+        "operationId": "donadoresyentidadesGetEntidadesId",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/entidades/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "patch": {
+        "summary": "PATCH /entidades/{id}",
+        "operationId": "donadoresyentidadesPatchEntidadesId",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/entidades/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donadores-entidades/necesidades": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /necesidades",
+        "operationId": "donadoresyentidadesPostNecesidades",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/necesidades${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "get": {
+        "summary": "GET /necesidades",
+        "operationId": "donadoresyentidadesGetNecesidades",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/necesidades${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "delete": {
+        "summary": "DELETE /necesidades",
+        "operationId": "donadoresyentidadesDeleteNecesidades",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/necesidades${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/donadores-entidades/necesidades/{id}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /necesidades/{id}",
+        "operationId": "donadoresyentidadesGetNecesidadesId",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/necesidades/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "patch": {
+        "summary": "PATCH /necesidades/{id}",
+        "operationId": "donadoresyentidadesPatchNecesidadesId",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/necesidades/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "summary": "DELETE /necesidades/{id}",
+        "operationId": "donadoresyentidadesDeleteNecesidadesId",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/necesidades/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donadores-entidades/necesidades/{id}/satisfaccion": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /necesidades/{id}/satisfaccion",
+        "operationId": "donadoresyentidadesPostNecesidadesIdSatisfaccion",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/necesidades/${params.id}/satisfaccion${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donadores-entidades/db": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "delete": {
+        "summary": "DELETE /db",
+        "operationId": "donadoresyentidadesDeleteDb",
+        "tags": [
+          "DonadoresYEntidades"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONADORES_ENTIDADES_URL}/db${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/logistica/asignaciones": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /asignaciones",
+        "operationId": "logisticaGetAsignaciones",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/asignaciones${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "post": {
+        "summary": "POST /asignaciones",
+        "operationId": "logisticaPostAsignaciones",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/asignaciones${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "delete": {
+        "summary": "DELETE /asignaciones",
+        "operationId": "logisticaDeleteAsignaciones",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/asignaciones${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/logistica/asignaciones/estado/{estado}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /asignaciones/estado/{estado}",
+        "operationId": "logisticaGetAsignacionesEstadoEstado",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/asignaciones/estado/${params.estado}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "estado",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/logistica/asignaciones/{idPaquete}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /asignaciones/{idPaquete}",
+        "operationId": "logisticaGetAsignacionesIdpaquete",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/asignaciones/${params.idPaquete}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "idPaquete",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/logistica/asignaciones/stock": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /asignaciones/stock",
+        "operationId": "logisticaPostAsignacionesStock",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/asignaciones/stock${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/logistica/depositos": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /depositos",
+        "operationId": "logisticaPostDepositos",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/depositos${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "get": {
+        "summary": "GET /depositos",
+        "operationId": "logisticaGetDepositos",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/depositos${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "delete": {
+        "summary": "DELETE /depositos",
+        "operationId": "logisticaDeleteDepositos",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/depositos${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/logistica/depositos/{id}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /depositos/{id}",
+        "operationId": "logisticaGetDepositosId",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/depositos/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/logistica/depositos/{id}/stock": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /depositos/{id}/stock",
+        "operationId": "logisticaGetDepositosIdStock",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/depositos/${params.id}/stock${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "summary": "DELETE /depositos/{id}/stock",
+        "operationId": "logisticaDeleteDepositosIdStock",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/depositos/${params.id}/stock${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/logistica/depositos/{id}/donacion": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /depositos/{id}/donacion",
+        "operationId": "logisticaPostDepositosIdDonacion",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/depositos/${params.id}/donacion${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/logistica/depositos/stock": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /depositos/stock",
+        "operationId": "logisticaPostDepositosStock",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/depositos/stock${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "delete": {
+        "summary": "DELETE /depositos/stock",
+        "operationId": "logisticaDeleteDepositosStock",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/depositos/stock${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/logistica/depositos/stock/{productoID}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /depositos/stock/{productoID}",
+        "operationId": "logisticaGetDepositosStockProductoid",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/depositos/stock/${params.productoID}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "productoID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/logistica/depositos/{id}/algoritmo": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "patch": {
+        "summary": "PATCH /depositos/{id}/algoritmo",
+        "operationId": "logisticaPatchDepositosIdAlgoritmo",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/depositos/${params.id}/algoritmo${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/logistica/entregas": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /entregas",
+        "operationId": "logisticaPostEntregas",
+        "tags": [
+          "Logistica"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.LOGISTICA_URL}/entregas${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/donaciones/donaciones": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /donaciones",
+        "operationId": "donacionesPostDonaciones",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/donaciones${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "get": {
+        "summary": "GET /donaciones",
+        "operationId": "donacionesGetDonaciones",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/donaciones${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/donaciones/donaciones/search": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /donaciones/search",
+        "operationId": "donacionesGetDonacionesSearch",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/donaciones/search${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/donaciones/donaciones/{id}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /donaciones/{id}",
+        "operationId": "donacionesGetDonacionesId",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/donaciones/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "summary": "DELETE /donaciones/{id}",
+        "operationId": "donacionesDeleteDonacionesId",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/donaciones/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donaciones/donaciones/{id}/estado": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "patch": {
+        "summary": "PATCH /donaciones/{id}/estado",
+        "operationId": "donacionesPatchDonacionesIdEstado",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/donaciones/${params.id}/estado${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donaciones/donaciones/{id}/queja": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /donaciones/{id}/queja",
+        "operationId": "donacionesPostDonacionesIdQueja",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/donaciones/${params.id}/queja${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donaciones/categorias": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /categorias",
+        "operationId": "donacionesPostCategorias",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/categorias${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "get": {
+        "summary": "GET /categorias",
+        "operationId": "donacionesGetCategorias",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/categorias${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/donaciones/categorias/{id}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "delete": {
+        "summary": "DELETE /categorias/{id}",
+        "operationId": "donacionesDeleteCategoriasId",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/categorias/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donaciones/categorias/{categoriaID}/subcategorias": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /categorias/{categoriaID}/subcategorias",
+        "operationId": "donacionesPostCategoriasCategoriaidSubcategorias",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/categorias/${params.categoriaID}/subcategorias${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "categoriaID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donaciones/categorias/{id}/subcategorias": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /categorias/{id}/subcategorias",
+        "operationId": "donacionesGetCategoriasIdSubcategorias",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/categorias/${params.id}/subcategorias${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donaciones/subcategorias/{id}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /subcategorias/{id}",
+        "operationId": "donacionesGetSubcategoriasId",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/subcategorias/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "summary": "DELETE /subcategorias/{id}",
+        "operationId": "donacionesDeleteSubcategoriasId",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/subcategorias/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donaciones/productos": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /productos",
+        "operationId": "donacionesPostProductos",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/productos${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "get": {
+        "summary": "GET /productos",
+        "operationId": "donacionesGetProductos",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/productos${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/donaciones/productos/{id}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /productos/{id}",
+        "operationId": "donacionesGetProductosId",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/productos/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "summary": "PUT /productos/{id}",
+        "operationId": "donacionesPutProductosId",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/productos/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "summary": "DELETE /productos/{id}",
+        "operationId": "donacionesDeleteProductosId",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/productos/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donaciones/productos/{id}/existencia": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /productos/{id}/existencia",
+        "operationId": "donacionesGetProductosIdExistencia",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/productos/${params.id}/existencia${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donaciones/identificadores": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /identificadores",
+        "operationId": "donacionesPostIdentificadores",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/identificadores${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "get": {
+        "summary": "GET /identificadores",
+        "operationId": "donacionesGetIdentificadores",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/identificadores${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/donaciones/identificadores/{id}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "delete": {
+        "summary": "DELETE /identificadores/{id}",
+        "operationId": "donacionesDeleteIdentificadoresId",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/identificadores/${params.id}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/donaciones/reset": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "delete": {
+        "summary": "DELETE /reset",
+        "operationId": "donacionesDeleteReset",
+        "tags": [
+          "Donaciones"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.DONACIONES_URL}/reset${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/incentivos": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /",
+        "operationId": "incentivosGetRoot",
+        "tags": [
+          "Incentivos"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.INCENTIVOS_URL}/${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/incentivos/insignias": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /insignias",
+        "operationId": "incentivosPostInsignias",
+        "tags": [
+          "Incentivos"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.INCENTIVOS_URL}/insignias${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "get": {
+        "summary": "GET /insignias",
+        "operationId": "incentivosGetInsignias",
+        "tags": [
+          "Incentivos"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.INCENTIVOS_URL}/insignias${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/incentivos/insignias/{parametro}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /insignias/{parametro}",
+        "operationId": "incentivosGetInsigniasParametro",
+        "tags": [
+          "Incentivos"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.INCENTIVOS_URL}/insignias/${params.parametro}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "parametro",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "si empieza con ins- es un insigniaID; si no, es un donadorID"
+      },
+      "post": {
+        "summary": "POST /insignias/{parametro}",
+        "operationId": "incentivosPostInsigniasParametro",
+        "tags": [
+          "Incentivos"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.INCENTIVOS_URL}/insignias/${params.parametro}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "parametro",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "parametro = donadorID; asigna insignia"
+      }
+    },
+    "/incentivos/misiones": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /misiones",
+        "operationId": "incentivosPostMisiones",
+        "tags": [
+          "Incentivos"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.INCENTIVOS_URL}/misiones${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      },
+      "get": {
+        "summary": "GET /misiones",
+        "operationId": "incentivosGetMisiones",
+        "tags": [
+          "Incentivos"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.INCENTIVOS_URL}/misiones${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
+    "/incentivos/misiones/{parametro}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /misiones/{parametro}",
+        "operationId": "incentivosGetMisionesParametro",
+        "tags": [
+          "Incentivos"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.INCENTIVOS_URL}/misiones/${params.parametro}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "parametro",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "si empieza con mis- es un misionID; si no, es un donadorID"
+      },
+      "post": {
+        "summary": "POST /misiones/{parametro}",
+        "operationId": "incentivosPostMisionesParametro",
+        "tags": [
+          "Incentivos"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.INCENTIVOS_URL}/misiones/${params.parametro}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "parametro",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "parametro = donadorID; asigna mision"
+      }
+    },
+    "/incentivos/procesamiento/{donadorID}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "POST /procesamiento/{donadorID}",
+        "operationId": "incentivosPostProcesamientoDonadorid",
+        "tags": [
+          "Incentivos"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.INCENTIVOS_URL}/procesamiento/${params.donadorID}${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "donadorID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/incentivos/donadores/{donadorID}/estado": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "GET /donadores/{donadorID}/estado",
+        "operationId": "incentivosGetDonadoresDonadoridEstado",
+        "tags": [
+          "Incentivos"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.INCENTIVOS_URL}/donadores/${params.donadorID}/estado${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "parameters": [
+          {
+            "name": "donadorID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/incentivos/reset": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "delete": {
+        "summary": "DELETE /reset",
+        "operationId": "incentivosDeleteReset",
+        "tags": [
+          "Incentivos"
+        ],
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "${env.INCENTIVOS_URL}/reset${search}"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    }
+  }
+}
